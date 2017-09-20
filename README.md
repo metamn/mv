@@ -2,6 +2,11 @@
 
 Vue components for metamn
 
+## SCSS mixins and imports
+
+- Vue single file components has absolutely no support for SCSS mixins and imports
+
+
 ## Testing
 
 - both unit and e22 tests are running fine

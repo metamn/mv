@@ -3,6 +3,8 @@
 </template>
 
 <script>
+  import 'normalize.css'
+  
   export default {
     name: 'mv-typography-reset'
   }
@@ -10,7 +12,7 @@
 
 <style lang="scss">
   // External CSS reset
-  @import './../../assets/css/reset.css';
+  // @import './../../assets/css/reset.css';
 
   // Border box
   * {
