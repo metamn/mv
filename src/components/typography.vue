@@ -1,9 +1,6 @@
 <script>
   export default {
-    name: 'mv-typography',
-    data () {
-      return {}
-    }
+    name: 'mv-typography'
   }
 </script>
 

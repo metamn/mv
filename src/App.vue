@@ -6,12 +6,12 @@
 </template>
 
 <script>
-  import Typography from './components/Typography'
+  import typography from './components/typography'
 
   export default {
     name: 'app',
     components: {
-      'mv-typography': Typography
+      'mv-typography': typography
     }
   }
 </script>
