@@ -2,6 +2,11 @@
 
 Vue components for metamn
 
+## This version
+
+- goes with SCSS which is cumbersome
+- e2e tests works when empty typography IDs are inserted into the html which is ugly
+
 ## SCSS mixins and imports
 
 - Vue single file components has absolutely no support for SCSS mixins and imports
