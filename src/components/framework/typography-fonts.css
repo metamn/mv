@@ -1,0 +1,10 @@
+// The system font stack
+@font-face {
+  font-family: system;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+.default {
+  font-family: 'nimbus-sans', sans-serif;
+  font-weight: normal;
+}

@@ -1,20 +1,24 @@
 <template>
-  <div id="app">
+  <div id="app" :class="[$style.defaultFont, $style.defaultScale]">
     <router-view></router-view>
-    <mv-typography></mv-typography>
   </div>
 </template>
 
 <script>
-  import typography from './framework/typography'
-
+  import 'normalize.css'
+  
   export default {
-    name: 'app',
-    components: {
-      'mv-typography': typography
-    }
+    name: 'app'
   }
 </script>
 
-<style lang="scss">
+<style module>
+  .defaultFont {
+    composes: default from './framework/typography-fonts.css';
+  }
+
+  .defaultScale {
+    font-size: 150%;
+    line-height: 1.25;
+  }
 </style>
