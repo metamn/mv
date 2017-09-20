@@ -6,7 +6,15 @@
 
 <script>
   import 'normalize.css'
-  
+
+  var WebFont = require('webfontloader')
+
+  WebFont.load({
+    typekit: {
+      id: 'wrb3hlx'
+    }
+  })
+
   export default {
     name: 'app'
   }
