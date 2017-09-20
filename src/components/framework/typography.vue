@@ -8,8 +8,8 @@
 
 <script>
   import typographyReset from './typography-reset'
-  import typographyFonts from './typography-fonts.vue'
-  import typographyScale from './typography-scale.vue'
+  import typographyFonts from './typography-fonts'
+  import typographyScale from './typography-scale'
 
   export default {
     name: 'mv-typography',
