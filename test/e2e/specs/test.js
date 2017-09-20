@@ -13,6 +13,8 @@ module.exports = {
       .waitForElementVisible('#app', 5000)
       .assert.elementPresent('.home')
       .assert.elementPresent('#typography')
+      .assert.elementPresent('#typography-reset')
+      .assert.elementPresent('#fonts')
       .end()
   }
 }

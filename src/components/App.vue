@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import typography from './framework/typography/typography'
+  import typography from './framework/typography'
 
   /**
    * Setting up the application
