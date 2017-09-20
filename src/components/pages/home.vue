@@ -14,8 +14,10 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+  @import "./../framework/typography-scale";
+
   .home {
-    padding: 1.25em;
+    padding: $lem;
   }
 </style>

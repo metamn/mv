@@ -23,6 +23,20 @@
 </script>
 
 
-<style scoped>
-  display: none;
+<style lang="scss">
+  @import "./typography-fonts";
+  @import "./typography-scale";
+
+  // Use system fonts by default
+  // - https://css-tricks.com/snippets/css/system-font-stack/
+  // Use webfonts only when they are loaded
+  // - https://css-tricks.com/loading-web-fonts-with-the-web-font-loader/
+  html {
+    @include font(system);
+    @include scale(default);
+
+    &.wf-active {
+      @include font(nimbus-sans-regular);
+    }
+  }
 </style>

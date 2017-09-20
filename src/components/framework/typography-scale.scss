@@ -1,0 +1,14 @@
+// Default settings
+// - make changes here
+$font-size: 100%;
+$line-height: 1.25;
+$lem: #{$line-height}em;
+
+// Mixins
+@mixin scale($variant) {
+  // The default font size and line height
+  @if ($variant == 'default') {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}

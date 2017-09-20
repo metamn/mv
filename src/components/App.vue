@@ -8,9 +8,6 @@
 <script>
   import typography from './framework/typography'
 
-  /**
-   * Setting up the application
-   */
   export default {
     name: 'app',
     components: {
