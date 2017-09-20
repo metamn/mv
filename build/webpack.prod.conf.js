@@ -98,7 +98,8 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ])
+    ]),
+    // Server side rendering
     new PrerenderSpaPlugin(
       // Path to compiled app
       path.join(__dirname, '../dist'),

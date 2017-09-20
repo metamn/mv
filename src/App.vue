@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <mv-typography></mv-typography>
     <router-view></router-view>
+    <mv-typography></mv-typography>
   </div>
 </template>
 
