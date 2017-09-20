@@ -1,20 +1,23 @@
 <template lang="html">
   <div id="typography" hidden>
     <mv-typography-reset></mv-typography-reset>
-    <mv-fonts></mv-fonts>
+    <mv-typography-scale></mv-typography-scale>
+    <mv-typography-fonts></mv-typography-fonts>
   </div>
 </template>
 
 <script>
   import typographyReset from './typography-reset'
-  import fonts from './fonts.vue'
+  import typographyFonts from './typography-fonts.vue'
+  import typographyScale from './typography-scale.vue'
 
   export default {
     name: 'mv-typography',
 
     components: {
       'mv-typography-reset': typographyReset,
-      'mv-fonts': fonts
+      'mv-typography-fonts': typographyFonts,
+      'mv-typography-scale': typographyScale
     }
   }
 </script>

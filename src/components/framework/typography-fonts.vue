@@ -1,5 +1,5 @@
 <template lang="html">
-  <div id="#fonts" hidden></div>
+  <div id="#typography-fonts" hidden></div>
 </template>
 
 <script>
@@ -12,7 +12,7 @@
   })
 
   export default {
-    name: 'mv-fonts'
+    name: 'mv-typography-fonts'
   }
 </script>
 
@@ -26,11 +26,11 @@
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
   }
 
+  // Use webfonts only when they are loaded
+  // - https://css-tricks.com/loading-web-fonts-with-the-web-font-loader/
   html {
     font-family: 'system';
 
-    // Use webfonts only when they are loades
-    // - https://css-tricks.com/loading-web-fonts-with-the-web-font-loader/
     &.wf-active {
       font-family: 'nimbus-sans';
     }

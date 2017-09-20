@@ -14,7 +14,7 @@ module.exports = {
       .assert.elementPresent('.home')
       .assert.elementPresent('#typography')
       .assert.elementPresent('#typography-reset')
-      .assert.elementPresent('#fonts')
+      .assert.elementPresent('#typography-fonts')
       .end()
   }
 }
