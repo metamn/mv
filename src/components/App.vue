@@ -6,8 +6,11 @@
 </template>
 
 <script>
-  import typography from './components/framework/typography/typography'
+  import typography from './framework/typography/typography'
 
+  /**
+   * Setting up the application
+   */
   export default {
     name: 'app',
     components: {
@@ -15,6 +18,3 @@
     }
   }
 </script>
-
-<style lang="scss">
-</style>

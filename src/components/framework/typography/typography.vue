@@ -9,6 +9,9 @@
 </script>
 
 <style lang="scss">
+  /*
+  Import CSS Reset
+   */
   @import './../../../assets/css/reset.css';
 
   * {
