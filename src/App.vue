@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import typography from './components/typography'
+  import typography from './components/framework/typography/typography'
 
   export default {
     name: 'app',
