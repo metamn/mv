@@ -1,6 +1,6 @@
 <template>
   <section class="home">
-    <h3>Home</h3>
+    <h3>Vue components for metamn</h3>
   </section>
 </template>
 
@@ -8,12 +8,14 @@
 export default {
   name: 'home',
   data () {
-    return {
-    }
+    return {}
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .home {
+    padding: 1.25em;
+  }
 </style>
