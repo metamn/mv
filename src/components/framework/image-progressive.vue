@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="image">
     <div class="progressive">
-      <img class="preview" v-progressive="src" :data-srcset="srcset" :src="preview" />
+      <img :class="computedClass" v-progressive="src" :data-srcset="srcset" :src="preview" />
     </div>
   </div>
 </template>
@@ -18,6 +18,13 @@
   export default {
     name: 'mv-image-progressive',
     props: {
+      /**
+       * Lazy load the image
+       */
+      lazy: {
+        type: Boolean,
+        default: true
+      },
       /**
        * The source of the image
        */
@@ -39,6 +46,11 @@
       srcset: {
         type: String,
         default: 'http://7xiblh.com1.z0.glb.clouddn.com/progressive/2.jpg 320w, http://7xiblh.com1.z0.glb.clouddn.com/progressive/3.jpg 640w'
+      }
+    },
+    computed: {
+      computedClass () {
+        return this.lazy ? 'preview lazy' : 'preview'
       }
     }
   }
