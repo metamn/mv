@@ -9,7 +9,7 @@
   import 'normalize.css'
 
   // Loading webfonts
-  import fonts from './framework/typography-fonts'
+  import fonts from './framework/fonts'
 
   export default {
     name: 'app',
@@ -21,12 +21,12 @@
 
 <style module>
   .defaultStyle {
-    composes: default from './framework/typography-fonts.css';
-    composes: default from './framework/typography-scale.css';
+    composes: default from './framework/fonts.css';
+    composes: default from './framework/scale.css';
   }
 </style>
 
 <style lang="scss">
   // Another global css reset applied to <html>, <body> etc elements
-  @import "./framework/typography-reset";
+  @import "./framework/reset";
 </style>
