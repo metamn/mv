@@ -8,6 +8,8 @@
         </mv-text-style>
       </mv-link>
     </mv-title>
+
+    <mv-image-progressive :class="[$style.imageProgressive]"></mv-image-progressive>
   </section>
 </template>
 
@@ -16,6 +18,7 @@
   import link from './../framework/link'
   import textStyle from './../framework/text-style'
   import textFlip from './../framework/text-flip'
+  import imageProgressive from './../framework/image-progressive'
 
   export default {
     name: 'home',
@@ -23,7 +26,8 @@
       'mv-title': title,
       'mv-link': link,
       'mv-text-style': textStyle,
-      'mv-text-flip': textFlip
+      'mv-text-flip': textFlip,
+      'mv-image-progressive': imageProgressive
     }
   }
 </script>
@@ -33,5 +37,9 @@
 
   .defaultStyle {
     padding: lem;
+  }
+
+  .imageProgressive {
+    width: calc(lem * 10);
   }
 </style>
