@@ -1,12 +1,17 @@
 <template>
   <section id="home" :class="[$style.defaultStyle]">
-    <h3>Vue components for metamn</h3>
+    <mv-title type="section">Vue components for metamn</mv-title>
   </section>
 </template>
 
 <script>
+  import title from './../project/title'
+
   export default {
-    name: 'home'
+    name: 'home',
+    components: {
+      'mv-title': title
+    }
   }
 </script>
 
