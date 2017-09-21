@@ -28,6 +28,7 @@
 
 <style module>
   .logo {
-    composes: logo from './fonts.css'
+    composes: logo from './fonts.css';
+    display: inline-flex;
   }
 </style>
