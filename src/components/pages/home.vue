@@ -37,9 +37,14 @@
 
   .defaultStyle {
     padding: lem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
   }
 
   .imageProgressive {
-    width: calc(lem * 10);
+    width: 33vmax;
+    padding: lem;
   }
 </style>
