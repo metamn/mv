@@ -21,8 +21,7 @@
 
 <style module>
   .defaultStyle {
-    composes: default from './framework/fonts.css';
-    composes: default from './framework/scale.css';
+    composes: default from './framework/text-style.css';
   }
 </style>
 
