@@ -1,3 +1,7 @@
+@value white: white;
+@value black: black;
+@value blue: blue;
+
 .default {
   color: black;
   background-color: white;

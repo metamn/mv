@@ -1,3 +1,5 @@
+@value lem: 1.25em;
+
 .default {
   font-size: 125%;
   line-height: 1.25;

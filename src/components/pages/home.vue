@@ -11,7 +11,9 @@
 </script>
 
 <style module>
+  @value lem from './../framework/scale.css';
+
   .defaultStyle {
-    padding: 1.25em;
+    padding: lem;
   }
 </style>
