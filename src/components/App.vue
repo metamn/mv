@@ -1,32 +1,32 @@
 <template>
-  <div id="app" :class="[$style.defaultFont, $style.defaultScale]">
+  <div id="app" :class="[$style.defaultStyle]">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
+  // A global css reset applied to <html>, <body> etc elements
   import 'normalize.css'
 
-  var WebFont = require('webfontloader')
-
-  WebFont.load({
-    typekit: {
-      id: 'wrb3hlx'
-    }
-  })
+  // Loading webfonts
+  import fonts from './framework/typography-fonts'
 
   export default {
-    name: 'app'
+    name: 'app',
+    components: {
+      'mv-fonts': fonts
+    }
   }
 </script>
 
 <style module>
-  .defaultFont {
+  .defaultStyle {
     composes: default from './framework/typography-fonts.css';
+    composes: default from './framework/typography-scale.css';
   }
+</style>
 
-  .defaultScale {
-    font-size: 150%;
-    line-height: 1.25;
-  }
+<style lang="scss">
+  // Another global css reset applied to <html>, <body> etc elements
+  @import "./framework/typography-reset";
 </style>

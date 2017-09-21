@@ -1,4 +1,5 @@
 <script>
+  // Web fonts
   var WebFont = require('webfontloader')
 
   WebFont.load({
@@ -8,6 +9,6 @@
   })
 
   export default {
-    name: 'mv-typography-fonts'
+    name: 'mv-fonts'
   }
 </script>

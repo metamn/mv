@@ -1,23 +1,17 @@
 <template>
-  <section class="home">
+  <section id="home" :class="[$style.defaultStyle]">
     <h3>Vue components for metamn</h3>
   </section>
 </template>
 
 <script>
   export default {
-    name: 'home',
-    data () {
-      return {}
-    }
+    name: 'home'
   }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-  @import "./../framework/typography-scale";
-
-  .home {
-    padding: $lem;
+<style module>
+  .defaultStyle {
+    padding: 1.25em;
   }
 </style>
