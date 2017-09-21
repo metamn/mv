@@ -3,3 +3,8 @@
   composes: default from './scale.css';
   composes: default from './colors.css';
 }
+
+@value link from './colors.css';
+.link {
+  color: link;
+}
