@@ -73,6 +73,8 @@
         switch (this.klass) {
           case 'underlined':
             return this.$style.underlined
+          case 'not-styled':
+            return this.$style.notStyled
           default:
             return this.$style.default
         }
@@ -83,12 +85,17 @@
 
 <style module>
   .default {
-    composes: link from './../framework/text-style.css';
+    composes: link from './text-style.css';
     text-decoration: none;
   }
 
   .underlined {
     composes: default;
     text-decoration: underline;
+  }
+
+  .notStyled {
+    composes: default from './colors.css';
+    text-decoration: none;
   }
 </style>

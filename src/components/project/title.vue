@@ -32,7 +32,7 @@
   }
 
   .section {
-    composes: bold from './../framework/fonts.css';
+    composes: default;
     composes: large1 from './../framework/scale.css';
   }
 </style>
