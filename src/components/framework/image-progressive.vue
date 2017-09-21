@@ -33,11 +33,12 @@
         default: 'http://7xiblh.com1.z0.glb.clouddn.com/progressive/r2.jpg'
       },
       /**
-       * The responsive version of the image
+       * The responsive versions of the image
+       * - https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/
        */
       srcset: {
         type: String,
-        default: ''
+        default: 'http://7xiblh.com1.z0.glb.clouddn.com/progressive/2.jpg 320w, http://7xiblh.com1.z0.glb.clouddn.com/progressive/3.jpg 640w'
       }
     }
   }
