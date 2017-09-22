@@ -41,24 +41,36 @@
 <style lang="scss">
   .intrinsic-ratio {
     $character-count: 28;
-    $matrix-size: 5; // 6x6=36, so 28 chars fit in; 5x5=25 would be not enough
+    $matrix-size: 6;
+    // 6x6=36, so 28 chars fit in; 5x5=25 would be not enough
+    // however we should go with 5 ... it's like been counting from 0..5 instead of 1..6
 
     $font-size: 1.333em;
     $padding: 1.25em;
-    $cell-size: calc(#{$font-size} + 2 * #{$padding: });
+    $cell-size: calc(#{$font-size} + 2 * #{$padding}) ;
 
-    width: calc(#{$cell-size} * #{$matrix-size});
-    max-width: 100vw;
+    $width: calc(#{$cell-size} * (#{$matrix-size} - 1));
+    width: $width;
+
+    .char {
+      padding: $padding;
+    }
+
+    // Check if the component overflows the screen
+    // - here the media query is not working with calc() ... so manually 380px is added
+    @media screen and (max-width: 380px) {
+      width: 100vw;
+
+      .char {
+        padding: 5.5vmin;
+      }
+    }
 
     .text-spacer {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: baseline;
-
-      .char {
-        padding: $padding;
-      }
     }
   }
 </style>
