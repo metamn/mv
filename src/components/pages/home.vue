@@ -44,7 +44,7 @@
   }
 
   .imageProgressive {
-    width: 33vmax;
+    width: calc(lem * 15);
     padding: lem;
   }
 </style>
