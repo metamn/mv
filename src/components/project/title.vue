@@ -28,7 +28,7 @@
 
 <style module>
   .default {
-    composes: bold from './../framework/fonts.css';
+    composes: default from './../framework/fonts.css';
   }
 
   .section {
