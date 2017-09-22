@@ -1,10 +1,10 @@
 <template>
   <section id="home" :class="[$style.defaultStyle]">
     <mv-title type="section">
-      <mv-text-spacer text="Vue components for"></mv-text-spacer>
+      <mv-text-spacer text="Curating on new trajectories"></mv-text-spacer>
       <mv-link url="http://metamn.io" title="metamn" klass="not-styled">
         <mv-text-style type="logo">
-          <mv-text-flip text="metamn"></mv-text-flip>
+          <mv-text-flip text="violuk"></mv-text-flip>
         </mv-text-style>
       </mv-link>
     </mv-title>
