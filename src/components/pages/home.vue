@@ -1,7 +1,9 @@
 <template>
   <section id="home" :class="[$style.defaultStyle]">
     <mv-title type="section">
-      <mv-text-spacer text="Curating on new trajectories"></mv-text-spacer>
+      <mv-intrinsic-ratio size="1:1">
+        <mv-text-spacer text="Curating on new trajectories"></mv-text-spacer>
+      </mv-intrinsic-ratio>
       <mv-link url="http://metamn.io" title="metamn" klass="not-styled">
         <mv-text-style type="logo">
           <mv-text-flip text="violuk"></mv-text-flip>
@@ -20,6 +22,7 @@
   import textFlip from './../framework/text-flip'
   import imageProgressive from './../framework/image-progressive'
   import textSpacer from './../framework/text-spacer'
+  import intrinsicRatio from './../framework/intrinsic-ratio'
 
   export default {
     name: 'home',
@@ -29,7 +32,8 @@
       'mv-text-style': textStyle,
       'mv-text-flip': textFlip,
       'mv-image-progressive': imageProgressive,
-      'mv-text-spacer': textSpacer
+      'mv-text-spacer': textSpacer,
+      'mv-intrinsic-ratio': intrinsicRatio
     }
   }
 </script>
