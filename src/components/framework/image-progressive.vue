@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="image">
     <div class="progressive">
-      <img :class="computedClass" v-progressive="src" :data-srcset="srcset" :src="preview" />
+      <img :class="[computedClass, 'img']" v-progressive="src" :data-srcset="srcset" :src="preview" />
     </div>
   </div>
 </template>

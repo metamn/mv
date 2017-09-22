@@ -1,5 +1,5 @@
 <template lang="html">
-  <a :class="computedClass" :href="computedURL" :title="title"><slot></slot></a>
+  <a :class="[computedClass, 'link']" :href="computedURL" :title="title"><slot></slot></a>
 </template>
 
 <script>

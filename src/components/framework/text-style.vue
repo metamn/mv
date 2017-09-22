@@ -17,7 +17,7 @@
       computedClass () {
         switch (this.type) {
           case 'logo':
-            return this.$style.logo
+            return [this.$style.logo, 'logo']
           default:
             return this.$style.default
         }
