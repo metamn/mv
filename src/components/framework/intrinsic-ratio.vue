@@ -1,6 +1,6 @@
 <template lang="html">
-  <div :class="computedClass">
-    <div class="container">
+  <div :class="[computedClass, 'intrinsic-ratio']">
+    <div :class="$style.container">
       <slot></slot>
     </div>
   </div>

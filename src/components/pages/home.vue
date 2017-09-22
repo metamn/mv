@@ -38,6 +38,31 @@
   }
 </script>
 
+<style lang="scss">
+  .intrinsic-ratio {
+    $character-count: 28;
+    $matrix-size: 5; // 6x6=36, so 28 chars fit in; 5x5=25 would be not enough
+
+    $font-size: 1.333em;
+    $padding: 1.25em;
+    $cell-size: calc(#{$font-size} + 2 * #{$padding: });
+
+    width: calc(#{$cell-size} * #{$matrix-size});
+    max-width: 100vw;
+
+    .text-spacer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: baseline;
+
+      .char {
+        padding: $padding;
+      }
+    }
+  }
+</style>
+
 <style module>
   @value lem from './../framework/scale.css';
 
