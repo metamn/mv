@@ -1,5 +1,6 @@
 <template>
   <div id="app" :class="[$style.defaultStyle]">
+    <mv-logo></mv-logo>
     <router-view></router-view>
   </div>
 </template>
@@ -11,10 +12,14 @@
   // Loading webfonts
   import fonts from './framework/fonts'
 
+  // Logo is needed here to have a proper HTML5 outline
+  import logo from './project/logo'
+
   export default {
     name: 'app',
     components: {
-      'mv-fonts': fonts
+      'mv-fonts': fonts,
+      'mv-logo': logo
     }
   }
 </script>
