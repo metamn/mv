@@ -1,5 +1,5 @@
 <template lang="html">
-  <aside class="about">
+  <aside :class="$style.about">
     <h3 hidden>About</h3>
 
     <div :class="$style.text">
@@ -17,14 +17,17 @@
 <style module>
   @value lem from './../framework/scale.css';
 
-  .text {
-    composes: large4 from './../framework/scale.css';
-    background: linear-gradient(to right, white, black);
-    // padding: lem;
+  .about {
+    background: linear-gradient(to right, red, yellow);
   }
 
-  .text:hover {
+  .about:hover {
     animation: pulse 10s ease-in-out infinite;
+  }
+
+  .text {
+    composes: large4 from './../framework/scale.css';
+    padding: lem;
   }
 
   @keyframes pulse {
