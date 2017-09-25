@@ -1,7 +1,7 @@
 <template lang="html">
   <h3 :class="[$style.strapline, 'strapline']">
     <mv-intrinsic-ratio size="1:1">
-      <mv-text-spacer text="Curating on new trajectories"></mv-text-spacer>
+      <mv-text-spacer text="curating on new trajectories"></mv-text-spacer>
     </mv-intrinsic-ratio>
   </h3>
 </template>
@@ -71,11 +71,12 @@
         align-items: baseline;
 
         will-change: auto;
-        transition: background-color 1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+        transition: transform 1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
 
         &:hover {
           .char {
             background-color: white;
+            transform: scale(2);
           }
         }
       }

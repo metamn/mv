@@ -15,6 +15,6 @@
 }
 
 .strapline {
-  // composes: large1 from './scale.css';
-  composes: bold from './fonts.css';
+  composes: large1 from './scale.css';
+  // composes: bold from './fonts.css';
 }
