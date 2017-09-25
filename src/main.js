@@ -1,4 +1,4 @@
-// The Vue build version to load with the `import` command
+  // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './components/App'
@@ -10,7 +10,10 @@ Vue.config.productionTip = false
 // - https://alligator.io/vuejs/progressive-image-loader/
 import ProgressiveImage from 'progressive-image/dist/vue'
 import 'progressive-image/dist/index.css'
-Vue.use(ProgressiveImage)
+Vue.use(ProgressiveImage, {
+  removePreview: true,
+  scale: false
+})
 
 /* eslint-disable no-new */
 new Vue({
