@@ -12,6 +12,10 @@
     </mv-title>
 
     <mv-image-progressive :class="[$style.imageProgressive]"></mv-image-progressive>
+
+    <div class="a">
+      another comp next
+    </div>
   </section>
 </template>
 
@@ -73,7 +77,8 @@
     width: $width;
 
     .char {
-      padding: $padding;
+      margin: $padding;
+      background: black;
     }
 
     // Check if the component overflows the screen
@@ -82,7 +87,7 @@
       width: 100vw;
 
       .char {
-        padding: 5.5vmin;
+        margin: 5.5vmin;
       }
     }
 
@@ -99,8 +104,6 @@
   @value lem from './../framework/scale.css';
 
   .defaultStyle {
-    padding: lem;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
