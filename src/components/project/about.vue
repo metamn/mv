@@ -22,7 +22,6 @@
     color: lightgray;
     will-change: color;
     transition: color 1s ease-in-out;
-    // animation: pulse 10s ease-in-out infinite;
   }
 
   .about:hover {

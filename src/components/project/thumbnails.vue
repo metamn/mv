@@ -52,13 +52,13 @@
   .ul {
     position: relative;
     top: calc(lem * 2);
-    background: lavender;
+    background: magenta;
     animation: thumbs 2s ease-in-out infinite;
   }
 
   img {
     /* hard-light, difference */
-    mix-blend-mode: difference;
+    mix-blend-mode: luminosity;
   }
 
   @keyframes thumbs {
@@ -66,7 +66,7 @@
       background: lavender;
     }
     50% {
-      background: red;
+      background: magenta;
     }
     75% {
       background: gainsboro;
