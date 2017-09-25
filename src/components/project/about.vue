@@ -18,7 +18,7 @@
   @value lem from './../framework/scale.css';
 
   .about {
-    background: linear-gradient(to right, red, yellow);
+    background: linear-gradient(to right, yellow, red);
   }
 
   .about:hover {

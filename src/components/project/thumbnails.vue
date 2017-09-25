@@ -2,8 +2,8 @@
   <aside :class="[$style.thumbnails, 'thumbnails']">
     <h3 hidden>Project thumbnails</h3>
 
-    <ul class="ul">
-      <li class="li" v-for="image in images">
+    <ul :class="$style.ul">
+      <li :class="$style.li" v-for="image in images">
         <mv-image-progressive :image='image'></mv-image-progressive>
       </li>
     </ul>
@@ -46,7 +46,13 @@
   @value lem from './../framework/scale.css';
 
   .thumbnails {
-    width: calc(lem * 15);
+    width: calc(lem * 10);
+  }
+
+  .ul {
+    position: relative;
+    top: calc(lem * 2);
+    background: blue;
   }
 
   img {
