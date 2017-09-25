@@ -18,7 +18,11 @@
   @value lem from './../framework/scale.css';
 
   .about {
-    background: linear-gradient(to right, yellow, red);
+    background: linear-gradient(to right bottom, white, black);
+    color: lightgray;
+    will-change: color;
+    transition: color 1s ease-in-out;
+    // animation: pulse 10s ease-in-out infinite;
   }
 
   .about:hover {
@@ -26,34 +30,27 @@
   }
 
   .text {
-    composes: large4 from './../framework/scale.css';
     padding: lem;
+    /* This is fully responsive and readable on all screens */
+    font-size: 6vmin;
   }
 
   @keyframes pulse {
-    0% {
-      background: linear-gradient(to right white, black);
-      color: white;
-      letter-spacing: 2.5px;
-    }
     25% {
-      background: linear-gradient(to right, red , yellow);
-      color: red;
-      letter-spacing: -12.5px;
+      color: gray;
+      opacity: .66;
     }
     50% {
-      background: linear-gradient(to bottom, black, white);
-      color: black;
-      letter-spacing: 1px;
+      color: red;
+      opacity: .33;
     }
     75% {
-      background: linear-gradient(to left, white, black);
-      color: white;
-      letter-spacing: 7px;
+      color: yellow;
+      opacity: .10;
     }
     100% {
-      background: linear-gradient(to top, white, black);
-      letter-spacing: 0px;
+      color: lightgray;
+      opacity: 1;
     }
   }
 </style>
