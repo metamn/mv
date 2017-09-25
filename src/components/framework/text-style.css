@@ -13,3 +13,8 @@
   composes: logo from './fonts.css';
   display: inline-flex;
 }
+
+.strapline {
+  // composes: large1 from './scale.css';
+  composes: bold from './fonts.css';
+}

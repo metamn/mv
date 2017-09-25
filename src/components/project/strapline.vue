@@ -1,5 +1,5 @@
 <template lang="html">
-  <h3 class="strapline">
+  <h3 :class="[$style.strapline, 'strapline']">
     <mv-intrinsic-ratio size="1:1">
       <mv-text-spacer text="Curating on new trajectories"></mv-text-spacer>
     </mv-intrinsic-ratio>
@@ -80,5 +80,11 @@
         }
       }
     }
+  }
+</style>
+
+<style module>
+  .strapline {
+    composes: strapline from './../framework/text-style.css';
   }
 </style>
