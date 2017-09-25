@@ -43,11 +43,6 @@
 </script>
 
 <style lang="scss">
-  .logo {
-    // since the text spacer might overlap with the logo ...
-    padding: 1.25em;
-  }
-
   .intrinsic-ratio {
     // Text spacer adaptive sizing
     //
@@ -78,7 +73,7 @@
 
     .char {
       margin: $padding;
-      background: black;
+      background-color: black;
     }
 
     // Check if the component overflows the screen
@@ -96,6 +91,15 @@
       flex-wrap: wrap;
       justify-content: space-around;
       align-items: baseline;
+
+      will-change: auto;
+      transition: background-color 1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+
+      &:hover {
+        .char {
+          background-color: white;
+        }
+      }
     }
   }
 </style>

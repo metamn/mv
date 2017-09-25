@@ -27,8 +27,11 @@
 </script>
 
 <style module>
+  @value lem from './scale.css';
+
   .logo {
     composes: logo from './fonts.css';
     display: inline-flex;
+    padding: lem;
   }
 </style>
