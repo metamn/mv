@@ -19,18 +19,18 @@
       return {
         images: [
           {
-            src: '/static/images/yona-friedman-the-dilution-of-architecture-1.jpg',
-            srcset: '/static/images/yona-friedman-the-dilution-of-architecture-1-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-1.jpg 1136w',
+            src: '/static/images/yona-friedman-the-dilution-of-architecture-1-640.jpg',
+            srcset: '/static/images/yona-friedman-the-dilution-of-architecture-1-320.jpg 320w, /static/images/yona-friedman-the-dilution-of-architecture-1-640.jpg 640w',
             preview: '/static/images/yona-friedman-the-dilution-of-architecture-1-preview.jpg'
           },
           {
-            src: '/static/images/do-not-trust-the-mirror-01.jpg',
-            srcset: '/static/images/do-not-trust-the-mirror-01-small.jpg 358w, /static/images/do-not-trust-the-mirror-01.jpg 715w',
+            src: '/static/images/do-not-trust-the-mirror-01-640.jpg',
+            srcset: '/static/images/do-not-trust-the-mirror-01-320.jpg 320w, /static/images/do-not-trust-the-mirror-01-640.jpg 640w',
             preview: '/static/images/do-not-trust-the-mirror-01-preview.jpg'
           },
           {
-            src: '/static/images/bernar-venet-metametria-1.jpg',
-            srcset: '/static/images/bernar-venet-metametria-1-small.jpg 960w, /static/images/bernar-venet-metametria-1.jpg 1920w',
+            src: '/static/images/bernar-venet-metametria-1-640.jpg',
+            srcset: '/static/images/bernar-venet-metametria-1-320.jpg 320w, /static/images/bernar-venet-metametria-1-640.jpg 640w',
             preview: '/static/images/bernar-venet-metametria-1-preview.jpg'
           }
         ]
@@ -48,5 +48,9 @@
   .thumbnails {
     width: calc(lem * 15);
     padding: lem;
+  }
+
+  img {
+    mix-blend-mode: difference;
   }
 </style>
