@@ -2,7 +2,7 @@
   <section id="home" :class="[$style.defaultStyle]">
     <mv-strapline></mv-strapline>
     <mv-thumbnails></mv-thumbnails>
-    <mv-about></mv-about>
+    <!-- <mv-about></mv-about> -->
   </section>
 </template>
 

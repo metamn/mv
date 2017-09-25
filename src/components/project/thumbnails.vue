@@ -47,10 +47,10 @@
 
   .thumbnails {
     width: calc(lem * 15);
-    padding: lem;
   }
 
   img {
+    /* hard-light, difference */
     mix-blend-mode: difference;
   }
 </style>
