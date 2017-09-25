@@ -63,7 +63,7 @@
 
   @keyframes thumbs {
     25% {
-      background: mintcream;
+      background: lavender;
     }
     50% {
       background: red;
