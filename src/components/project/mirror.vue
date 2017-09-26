@@ -98,4 +98,20 @@
     mix-blend-mode: hard-light;
   }
 
+
+  @keyframes flip {
+    0% {
+      transform: scaleX(1);
+    }
+    1% {
+      transform: scaleX(-1);
+    }
+    99% {
+      transform: scaleX(-1);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
 </style>
