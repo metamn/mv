@@ -99,7 +99,6 @@
 
   ul li {
     mix-blend-mode: luminosity;
-    // animation: thumbs 20s ease-in-out infinite;
 
     animation: infinite-shift-left 12.5s linear infinite;
     position: relative;
