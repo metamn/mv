@@ -60,11 +60,11 @@
     },
     computed: {
       computedClass () {
-        return this.lazy ? 'preview lazy' : 'preview'
+        return this.lazy ? 'preview lazy xxx' : 'preview xxx'
       }
     }
   }
 </script>
 
-<style lang="css">
+<style module>
 </style>

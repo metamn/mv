@@ -1,9 +1,9 @@
 <template lang="html">
-  <aside :class="[$style.thumbnails, 'thumbnails']">
+  <aside>
     <h3 hidden>Project thumbnails</h3>
 
-    <ul :class="$style.ul">
-      <li :class="$style.li" v-for="image in images">
+    <ul>
+      <li v-for="image in images">
         <mv-image-progressive :image='image'></mv-image-progressive>
       </li>
     </ul>
@@ -42,21 +42,21 @@
   }
 </script>
 
-<style module>
+<style module scoped>
   @value lem from './../framework/scale.css';
 
-  .thumbnails {
+  aside {
     width: calc(lem * 10);
   }
 
-  .ul {
+  aside ul {
     position: relative;
     top: calc(lem * 2);
     background: magenta;
     animation: thumbs 2s ease-in-out infinite;
   }
 
-  img {
+  aside ul li {
     /* hard-light, difference */
     mix-blend-mode: luminosity;
   }
