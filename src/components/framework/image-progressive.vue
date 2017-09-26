@@ -23,7 +23,7 @@
        */
       lazy: {
         type: Boolean,
-        default: true
+        default: false
       },
       /**
        * The image object
