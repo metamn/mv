@@ -1,6 +1,8 @@
 <template lang="html">
   <section>
-    <h3>Do Not Trust The Mirror</h3>
+    <h3>
+      Do Not Trust The Mirror
+    </h3>
 
     <ul>
       <li v-for="image in images">
@@ -71,6 +73,15 @@
   section {
     display: flex;
     flex-wrap: wrap;
+    background: black;
+    color: white;
+    position: relative;
+  }
+
+  h3 {
+    position: absolute;
+    top: 50%;
+    font-size: 300%;
   }
 
   ul {
@@ -78,5 +89,12 @@
 
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
+
+  ul li {
+    background: black;
+    mix-blend-mode: hard-light;
+  }
+
 </style>
