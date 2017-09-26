@@ -1,6 +1,6 @@
 <template lang="html">
   <section class="yona">
-    <h3 class="title">Yona Friedman: The Dilution of Architecture</h3>
+    <h3 hidden>Yona Friedman: The Dilution of Architecture</h3>
 
     <ul>
       <li v-for="image in images">
@@ -63,31 +63,38 @@
 </script>
 
 <style module scoped>
+  section {
+    overflow: hidden;
+  }
+
   ul {
     list-style: none;
 
     display: flex;
     flex-wrap: nowrap;
+
+    width: 6000%;
+    background: crimson;
   }
 
   ul li {
     mix-blend-mode: luminosity;
-    animation: thumbs 2s ease-in-out infinite;
+    // animation: thumbs 20s ease-in-out infinite;
   }
 
 
   @keyframes thumbs {
     25% {
-      mix-blend-mode: multiply;
-    }
-    50% {
       mix-blend-mode: luminosity;
     }
+    50% {
+      mix-blend-mode: hard-light;
+    }
     75% {
-      mix-blend-mode: multiply;
+      mix-blend-mode: luminosity;
     }
     100% {
-      mix-blend-mode: multiply;
+      mix-blend-mode: luminosity;
     }
   }
 </style>
