@@ -66,6 +66,8 @@
   section {
     overflow: hidden;
     position: relative;
+    background: crimson;
+    padding: 5em 5em 0;
   }
 
   h3 {
@@ -91,7 +93,6 @@
     flex-wrap: nowrap;
 
     width: 4000px;
-    background: crimson;
 
     position: relative;
   }
@@ -100,7 +101,7 @@
     mix-blend-mode: luminosity;
     // animation: thumbs 20s ease-in-out infinite;
 
-    animation: infinite-shift-left 50s linear infinite;
+    animation: infinite-shift-left 12.5s linear infinite;
     position: relative;
     z-index: 0;
 
@@ -111,14 +112,8 @@
     0% {
       left: 0px;
     }
-    25% {
-      left: -4000px;
-    }
     50% {
-      left: 0px;
-    }
-    75% {
-      left: 100vw;
+      left: -2000px;
     }
     100% {
       left: 0px;

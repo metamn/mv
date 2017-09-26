@@ -4,10 +4,7 @@
     <mv-thumbnails></mv-thumbnails>
     <mv-about></mv-about>
     <mv-yona></mv-yona>
-
-    <div class="a">
-      aaaaaaaaaaaaaaaaaaaaaaaa
-    </div>
+    <mv-mirror></mv-mirror>
   </section>
 </template>
 
@@ -16,6 +13,7 @@
   import thumbnails from './../project/thumbnails'
   import about from './../project/about'
   import yona from './../project/yona'
+  import mirror from './../project/mirror'
 
   export default {
     name: 'home',
@@ -23,7 +21,8 @@
       'mv-strapline': strapline,
       'mv-thumbnails': thumbnails,
       'mv-about': about,
-      'mv-yona': yona
+      'mv-yona': yona,
+      'mv-mirror': mirror
     }
   }
 </script>
