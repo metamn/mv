@@ -6,7 +6,6 @@
     <mv-about></mv-about>
     <mv-yona></mv-yona>
     <mv-mirror></mv-mirror>
-    <mv-strapline></mv-strapline>
     <v-waypoint @waypoint="waypointBottom"></v-waypoint>
     <div id="home-after"></div>
   </section>
@@ -32,16 +31,14 @@
       'mv-mirror': mirror
     },
     methods: {
-      reInsertHomePage () {
-        var MyPartial = Vue.extend({})
-        window.partial = new MyPartial({
-          template: '<div>inserted</div>'
-        })
-        window.partial.$mount().$prependTo('body')
-      },
       waypointTop (direction, going) {
         if ((direction.y === 'up') && going === 'in') {
           console.log('insert to top')
+
+          const HelloCtor = Vue.extend({})
+          new HelloCtor({
+            render: h => h(Home)
+          }).$mount('#newhome')
         }
       },
       waypointBottom (direction, going) {
@@ -51,7 +48,7 @@
           const HelloCtor = Vue.extend({})
           new HelloCtor({
             render: h => h(Home)
-          }).$mount('#app')
+          }).$mount('#newhome')
         }
       }
     }
