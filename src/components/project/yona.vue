@@ -105,6 +105,7 @@
     z-index: 0;
 
     min-width: 500px;
+    max-width: 500px;
   }
 
   @keyframes infinite-shift-left {
