@@ -2,7 +2,6 @@
   <div id="app" :class="[$style.defaultStyle]">
     <mv-logo></mv-logo>
     <router-view></router-view>
-    <div id="newhome"></div>
   </div>
 </template>
 
