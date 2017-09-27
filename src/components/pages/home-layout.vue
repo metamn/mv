@@ -1,9 +1,9 @@
 <template lang="html">
-  <div class="home-layout">
+  <div id="home-layout">
     <v-waypoint @waypoint="waypointTop"></v-waypoint>
-    <div id="home-placeholder-top"></div>
-    <mv-home></mv-home>
-    <div id="home-placeholder-bottom"></div>
+    <span class="homes" v-for="item in items">
+      <mv-home></mv-home>
+    </span>
     <v-waypoint @waypoint="waypointBottom"></v-waypoint>
   </div>
 </template>
@@ -11,35 +11,45 @@
 <script>
   import Vue from 'vue'
   import home from './home'
+  import homeLayout from './home-layout'
 
   export default {
     name: 'mv-home-layout',
     components: {
       'mv-home': home
     },
+    data: function () {
+      return {
+        items: ['a']
+      }
+    },
     methods: {
       waypointTop (direction, going) {
         if ((direction.y === 'up') && going === 'in') {
           console.log('insert to top')
 
+          this.items.push('a')
+
           const NewHome = Vue.extend({})
           new NewHome({
             render (createElement) {
-              return createElement(home)
+              return createElement(homeLayout)
             }
-          }).$mount('#home-placeholder-top')
+          }).$mount('#home-layout')
         }
       },
       waypointBottom (direction, going) {
         if ((direction.y === 'down') && going === 'in') {
           console.log('insert to bottom')
 
+          this.items.push('a')
+
           const NewHome = Vue.extend({})
           new NewHome({
             render (createElement) {
-              return createElement(home)
+              return createElement(homeLayout)
             }
-          }).$mount('#home-placeholder-bottom')
+          }).$mount('#home-layout')
         }
       }
     }
