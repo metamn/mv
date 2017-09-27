@@ -1,11 +1,13 @@
 <template>
   <section id="home" :class="[$style.defaultStyle]">
+    <v-waypoint @waypoint="waypointTop"></v-waypoint>
     <mv-strapline></mv-strapline>
     <mv-thumbnails></mv-thumbnails>
     <mv-about></mv-about>
     <mv-yona></mv-yona>
     <mv-mirror></mv-mirror>
     <mv-strapline></mv-strapline>
+    <v-waypoint @waypoint="waypointBottom"></v-waypoint>
   </section>
 </template>
 
@@ -24,6 +26,18 @@
       'mv-about': about,
       'mv-yona': yona,
       'mv-mirror': mirror
+    },
+    methods: {
+      waypointTop (direction, going) {
+        if ((direction.y === 'up') && going === 'in') {
+          console.log('insert to top')
+        }
+      },
+      waypointBottom (direction, going) {
+        if ((direction.y === 'down') && going === 'in') {
+          console.log('insert to bottom')
+        }
+      }
     }
   }
 </script>

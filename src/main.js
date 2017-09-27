@@ -11,6 +11,11 @@ Vue.config.productionTip = false
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload)
 
+// Waypoint scrolling
+// - https://github.com/scaccogatto/vue-waypoint
+import VueWaypoint from 'vue-waypoint'
+Vue.use(VueWaypoint)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
