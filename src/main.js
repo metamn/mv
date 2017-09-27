@@ -11,7 +11,7 @@ Vue.config.productionTip = false
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload)
 
-// Waypoint scrolling
+// Waypoint scrolling - checking elements entering / leaving the viewport
 // - https://github.com/scaccogatto/vue-waypoint
 import VueWaypoint from 'vue-waypoint'
 Vue.use(VueWaypoint)

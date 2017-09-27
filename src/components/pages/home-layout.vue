@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="home-layout">
     <v-waypoint @waypoint="waypointTop"></v-waypoint>
-    <span v-for="howManyTime in howManyTimes">
+    <span class="homes" v-for="howManyTime in howManyTimes">
       <mv-home></mv-home>
     </span>
     <v-waypoint @waypoint="waypointBottom"></v-waypoint>
@@ -10,6 +10,7 @@
 
 <script>
   import home from './home'
+  var VueScrollTo = require('vue-scrollto')
 
   export default {
     name: 'mv-home-layout',
@@ -37,6 +38,10 @@
           this.howManyTimes.push('again')
         }
       }
+    },
+    updated: function () {
+      console.log('updated')
+      VueScrollTo.scrollTo('.homes:nth-of-type(1) .end')
     }
   }
 </script>

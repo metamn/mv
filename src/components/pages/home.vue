@@ -5,6 +5,7 @@
     <mv-about></mv-about>
     <mv-yona></mv-yona>
     <mv-mirror></mv-mirror>
+    <div class="end">end</div>
   </section>
 </template>
 
