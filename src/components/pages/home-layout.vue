@@ -10,7 +10,6 @@
 
 <script>
   import home from './home'
-  var VueScrollTo = require('vue-scrollto')
 
   export default {
     name: 'mv-home-layout',
@@ -21,8 +20,10 @@
       return {
         /**
          * How many times the home component will be rendered
-         * - when we reach the top or bottom this counter is incremented
-         * - since the data is changed the entire component will be re-rendered
+         * - when we reach the top or bottom tof the page his counter is incremented
+         * - since a data is changed the entire component will be re-rendered
+         * - this way we will have another home component added whenever we hit
+         * the end or the beginning of the page
          */
         howManyTimes: ['once']
       }
@@ -31,6 +32,10 @@
       waypointTop (direction, going) {
         if ((direction.y === 'up') && going === 'in') {
           this.howManyTimes.push('again')
+          // here we should slide down to the top of the second slide
+          // the problem is the new slides are appended to the bottom and not to the top
+          // maybe an infinite scroll plugin should be used which adds items at top
+          // or manupilate the scrolltop of the window
         }
       },
       waypointBottom (direction, going) {
@@ -38,10 +43,6 @@
           this.howManyTimes.push('again')
         }
       }
-    },
-    updated: function () {
-      console.log('updated')
-      VueScrollTo.scrollTo('.homes:nth-of-type(1) .end')
     }
   }
 </script>
