@@ -4,14 +4,14 @@
 
     <ul>
       <li v-for="image in images">
-        <mv-image-progressive :image='image'></mv-image-progressive>
+        <mv-image :image='image'></mv-image>
       </li>
     </ul>
   </aside>
 </template>
 
 <script>
-  import imageProgressive from './../framework/image-progressive'
+  import image from './../framework/image'
 
   export default {
     name: 'mv-thumbnails',
@@ -21,23 +21,23 @@
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-1-640.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-1-320.jpg 320w, /static/images/yona-friedman-the-dilution-of-architecture-1-640.jpg 640w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-1-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-01-640.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-01-320.jpg 320w, /static/images/do-not-trust-the-mirror-01-640.jpg 640w',
-            preview: '/static/images/do-not-trust-the-mirror-01-preview.jpg'
+            title: 'Do Not Trust The Mirror'
           },
           {
             src: '/static/images/bernar-venet-metametria-1-640.jpg',
             srcset: '/static/images/bernar-venet-metametria-1-320.jpg 320w, /static/images/bernar-venet-metametria-1-640.jpg 640w',
-            preview: '/static/images/bernar-venet-metametria-1-preview.jpg'
+            title: 'Bernar Venet MetaMetria'
           }
         ]
       }
     },
     components: {
-      'mv-image-progressive': imageProgressive
+      'mv-image': image
     }
   }
 </script>

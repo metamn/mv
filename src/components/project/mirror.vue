@@ -6,14 +6,14 @@
 
     <ul>
       <li v-for="image in images">
-        <mv-image-progressive :image='image'></mv-image-progressive>
+        <mv-image :image='image'></mv-image>
       </li>
     </ul>
   </section>
 </template>
 
 <script>
-  import imageProgressive from './../framework/image-progressive'
+  import image from './../framework/image'
 
   export default {
     name: 'mv-mirror',
@@ -23,48 +23,48 @@
           {
             src: '/static/images/do-not-trust-the-mirror-01-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-01-small.jpg 715w, /static/images/do-not-trust-the-mirror-01.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-01-preview.jpg'
+            title: 'Do Not Trust The Mirror 1'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-02-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-02-small.jpg 715w, /static/images/do-not-trust-the-mirror-02.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-02-preview.jpg'
+            title: 'Do Not Trust The Mirror 2'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-03-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-03-small.jpg 715w, /static/images/do-not-trust-the-mirror-03.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-03-preview.jpg'
+            title: 'Do Not Trust The Mirror 3'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-04-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-04-small.jpg 715w, /static/images/do-not-trust-the-mirror-04.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-04-preview.jpg'
+            title: 'Do Not Trust The Mirror 4'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-05-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-05-small.jpg 715w, /static/images/do-not-trust-the-mirror-05.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-05-preview.jpg'
+            title: 'Do Not Trust The Mirror 5'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-06-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-06-small.jpg 715w, /static/images/do-not-trust-the-mirror-06.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-06-preview.jpg'
+            title: 'Do Not Trust The Mirror 6'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-07-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-07-small.jpg 715w, /static/images/do-not-trust-the-mirror-07.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-07-preview.jpg'
+            title: 'Do Not Trust The Mirror 7'
           },
           {
             src: '/static/images/do-not-trust-the-mirror-08-small.jpg',
             srcset: '/static/images/do-not-trust-the-mirror-08-small.jpg 715w, /static/images/do-not-trust-the-mirror-08.jpg 715w',
-            preview: '/static/images/do-not-trust-the-mirror-08-preview.jpg'
+            title: 'Do Not Trust The Mirror 8'
           }
         ]
       }
     },
     components: {
-      'mv-image-progressive': imageProgressive
+      'mv-image': image
     }
   }
 </script>

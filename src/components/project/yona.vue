@@ -4,14 +4,14 @@
 
     <ul>
       <li v-for="image in images">
-        <mv-image-progressive :image='image'></mv-image-progressive>
+        <mv-image :image='image'></mv-image>
       </li>
     </ul>
   </section>
 </template>
 
 <script>
-  import imageProgressive from './../framework/image-progressive'
+  import image from './../framework/image'
 
   export default {
     name: 'mv-yona',
@@ -21,43 +21,43 @@
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-1-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-1-lines-overlay-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-1-lines-overlay.jpg 1136w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-1-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 1'
           },
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-2-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-2-lines-overlay-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-2-lines-overlay.jpg 1136w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-2-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 2'
           },
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-3-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-3-lines-overlay-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-3-lines-overlay.jpg 1136w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-3-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 3'
           },
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-4-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-4-lines-overlay-small.jpg 426w, /static/images/yona-friedman-the-dilution-of-architecture-4-lines-overlay.jpg 852w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-4-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 4'
           },
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-5-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-5-lines-overlay-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-5-lines-overlay.jpg 1136w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-5-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 5'
           },
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-6-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-6-lines-overlay-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-6-lines-overlay.jpg 1136w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-6-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 6'
           },
           {
             src: '/static/images/yona-friedman-the-dilution-of-architecture-7-lines-overlay-small.jpg',
             srcset: '/static/images/yona-friedman-the-dilution-of-architecture-7-lines-overlay-small.jpg 568w, /static/images/yona-friedman-the-dilution-of-architecture-7-lines-overlay.jpg 1136w',
-            preview: '/static/images/yona-friedman-the-dilution-of-architecture-7-lines-overlay-small-preview.jpg'
+            title: 'Yona Friedman The Dilution Of Architecture 7'
           }
         ]
       }
     },
     components: {
-      'mv-image-progressive': imageProgressive
+      'mv-image': image
     }
   }
 </script>
