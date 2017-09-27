@@ -1,7 +1,7 @@
 <template lang="html">
   <div id="home-layout">
     <v-waypoint @waypoint="waypointTop"></v-waypoint>
-    <span class="homes" v-for="item in items">
+    <span v-for="howManyTime in howManyTimes">
       <mv-home></mv-home>
     </span>
     <v-waypoint @waypoint="waypointBottom"></v-waypoint>
@@ -9,9 +9,7 @@
 </template>
 
 <script>
-  import Vue from 'vue'
   import home from './home'
-  import homeLayout from './home-layout'
 
   export default {
     name: 'mv-home-layout',
@@ -20,36 +18,23 @@
     },
     data: function () {
       return {
-        items: ['a']
+        /**
+         * How many times the home component will be rendered
+         * - when we reach the top or bottom this counter is incremented
+         * - since the data is changed the entire component will be re-rendered
+         */
+        howManyTimes: ['once']
       }
     },
     methods: {
       waypointTop (direction, going) {
         if ((direction.y === 'up') && going === 'in') {
-          console.log('insert to top')
-
-          this.items.push('a')
-
-          const NewHome = Vue.extend({})
-          new NewHome({
-            render (createElement) {
-              return createElement(homeLayout)
-            }
-          }).$mount('#home-layout')
+          this.howManyTimes.push('again')
         }
       },
       waypointBottom (direction, going) {
         if ((direction.y === 'down') && going === 'in') {
-          console.log('insert to bottom')
-
-          this.items.push('a')
-
-          const NewHome = Vue.extend({})
-          new NewHome({
-            render (createElement) {
-              return createElement(homeLayout)
-            }
-          }).$mount('#home-layout')
+          this.howManyTimes.push('again')
         }
       }
     }
