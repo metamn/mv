@@ -27,6 +27,7 @@
 <style module>
   .defaultStyle {
     composes: default from './framework/text-style.css';
+    overflow: hidden;
   }
 </style>
 

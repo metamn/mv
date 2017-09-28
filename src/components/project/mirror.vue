@@ -113,7 +113,7 @@
     top: 0;
     left: 0;
     transform: scaleY(-1);
-    background: transparent;
+    background: transparent; /* tHIS MAKES THAT FUCKING TRICK !!!! */
   }
 
   .second li {
