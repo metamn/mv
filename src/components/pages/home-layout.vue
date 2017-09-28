@@ -58,7 +58,6 @@
        */
       saveCurrentPosition () {
         this.previousScrollHeightMinusTop = document.documentElement.scrollHeight - document.documentElement.scrollTop
-        console.log(this.previousScrollHeightMinusTop)
       },
       restoreCurrentPosition () {
         document.documentElement.scrollTop = document.documentElement.scrollHeight - this.previousScrollHeightMinusTop
