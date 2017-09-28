@@ -9,6 +9,12 @@
         <mv-image :image='image'></mv-image>
       </li>
     </ul>
+
+    <ul :class="$style.second">
+      <li v-for="image in images">
+        <mv-image :image='image'></mv-image>
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -90,27 +96,49 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
   }
 
   ul li {
     background: black;
     mix-blend-mode: hard-light;
+    cursor: pointer;
+  }
+
+  ul li:hover {
+    animation: flip 2s ease-in-out;
+  }
+
+  .second {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleY(-1);
+    background: transparent;
+  }
+
+  .second li {
+    opacity: 0;
+    mix-blend-mode: difference;
+  }
+
+  .second li:hover {
+    opacity: 1;
+    animation: flip 2s ease-in-out;
   }
 
 
   @keyframes flip {
     0% {
-      transform: scaleX(1);
+      transform: scaleY(1);
     }
     1% {
-      transform: scaleX(-1);
+      transform: scaleY(-1);
     }
     99% {
-      transform: scaleX(-1);
+      transform: scaleY(-1);
     }
     100% {
-      transform: scaleX(1);
+      transform: scaleY(1);
     }
   }
 
