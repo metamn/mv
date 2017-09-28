@@ -1,5 +1,5 @@
 <template lang="html">
-  <section class="yona">
+  <section>
     <h3>Yona Friedman: The Dilution of Architecture</h3>
 
     <ul>

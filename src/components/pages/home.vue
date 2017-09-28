@@ -5,7 +5,7 @@
     <mv-about></mv-about>
     <mv-yona></mv-yona>
     <mv-mirror></mv-mirror>
-    <div class="end">end</div>
+    <mv-venet></mv-venet>
   </section>
 </template>
 
@@ -15,6 +15,7 @@
   import about from './../project/about'
   import yona from './../project/yona'
   import mirror from './../project/mirror'
+  import venet from './../project/venet'
 
   export default {
     name: 'home',
@@ -23,7 +24,8 @@
       'mv-thumbnails': thumbnails,
       'mv-about': about,
       'mv-yona': yona,
-      'mv-mirror': mirror
+      'mv-mirror': mirror,
+      'mv-venet': venet
     }
   }
 </script>
