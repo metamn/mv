@@ -32,6 +32,7 @@
     padding: lem;
     /* This is fully responsive and readable on all screens */
     font-size: 6vmin;
+    text-align: justify;
   }
 
   @keyframes pulse {
