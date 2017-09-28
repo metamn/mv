@@ -1,4 +1,7 @@
 <template lang="html">
+  <!--
+  <img v-lazy="image.src" :data-srcset="image.srcset" :alt="image.title">
+  -->
   <img :src="image.src" :data-srcset="image.srcset" :alt="image.title">
 </template>
 
