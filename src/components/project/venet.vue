@@ -20,11 +20,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(/static/images/bernar-venet-metametria-1.jpg)
   }
 
   div {
     text-transform: uppercase;
-    animation: rotate 10s infinite;
+    background: lightgray;
+    mix-blend-mode: luminosity;
+    animation: rotate 300s infinite;
   }
 
   @keyframes rotate {
@@ -32,7 +35,7 @@
       transform: rotate(0deg) scale(1);
     }
     50% {
-      transform: rotate(360deg) scale(2);
+      transform: rotate(360deg) scale(1.2);
     }
     100% {
       transform: rotate(0deg) scale(1);
@@ -41,7 +44,7 @@
 
   div span {
     font-size: 200%;
-    animation: flow 20s infinite;
+    animation: flow 200s infinite;
   }
 
   @keyframes flow {
@@ -58,6 +61,7 @@
 </style>
 
 <style type='text/css'>
+    /* http://csswarp.eleqtriq.com/ */
    #warped {position: relative; display: block; width:837pt; height:548pt;}
 
    #warped>span[class^=w]:nth-of-type(n+0){display:block; position:absolute;
