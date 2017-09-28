@@ -58,9 +58,17 @@
        */
       saveCurrentPosition () {
         this.previousScrollHeightMinusTop = document.documentElement.scrollHeight - document.documentElement.scrollTop
+        console.log(this.previousScrollHeightMinusTop)
       },
+      /**
+       * Restore the current scroll position
+       * - it's the pair function of saveCurrentPosition()
+       * - to make it cross browser: https://stackoverflow.com/questions/23313092/set-scrolltop-cross-browser
+       */
       restoreCurrentPosition () {
-        document.documentElement.scrollTop = document.documentElement.scrollHeight - this.previousScrollHeightMinusTop
+        var position = document.documentElement.scrollHeight - this.previousScrollHeightMinusTop
+        document.documentElement.scrollTop = position
+        document.body.scrollTop = position
       },
       /**
        * The waypointTop event handler
@@ -91,6 +99,3 @@
     }
   }
 </script>
-
-<style lang="css">
-</style>
