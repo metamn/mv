@@ -17,27 +17,10 @@
     },
     data: function () {
       return {
-        height: 0
+        previousScrollHeightMinusTop: 0
       }
     },
-    mounted: function () {
-      const body = document.body
-      const html = document.documentElement
-      this.height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-      console.log('h: ' + this.height)
-    },
     methods: {
-      /**
-       * Get the height of the home
-       * - then we can scroll down to the second home when a new one is inserted above
-       * - the problem is lazy loading: we don't know the real size of the home
-       * until we didn't scroolled down to the bottom first
-       */
-      getHeight () {
-        const body = document.body
-        const html = document.documentElement
-        return Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight)
-      },
       /**
        * Create a new container div where a new home will be added
        */
@@ -70,6 +53,17 @@
         }).$mount('.new-home-container')
       },
       /**
+       * Save the current scroll position and scrollHeight of the container
+       * - http://kirbysayshi.com/2013/08/19/maintaining-scroll-position-knockoutjs-list.html
+       */
+      saveCurrentPosition () {
+        this.previousScrollHeightMinusTop = document.documentElement.scrollHeight - document.documentElement.scrollTop
+        console.log(this.previousScrollHeightMinusTop)
+      },
+      restoreCurrentPosition () {
+        document.documentElement.scrollTop = document.documentElement.scrollHeight - this.previousScrollHeightMinusTop
+      },
+      /**
        * The waypointTop event handler
        * @param  {[type]} direction [description]
        * @param  {[type]} going     [description]
@@ -77,9 +71,10 @@
        */
       waypointTop (direction, going) {
         if ((direction.y === 'up') && going === 'in') {
+          this.saveCurrentPosition()
           this.createNewContainer(direction.y)
           this.addNewHome()
-          window.scrollTo(0, this.height)
+          this.restoreCurrentPosition()
         }
       },
       /**
