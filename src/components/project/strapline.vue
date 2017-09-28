@@ -75,7 +75,7 @@
 
         &:hover {
           .char {
-            background-color: white;
+            background-color: transparent;
             transform: scale(2);
           }
         }
