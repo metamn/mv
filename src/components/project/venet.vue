@@ -39,46 +39,21 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
-    mix-blend-mode: hard-light;
-    animation: zindex 20s infinite;
-  }
-
-  @keyframes zindex {
-    0% {
-      z-index: -1;
-    }
-    50% {
-      z-index: 0;
-    }
-    100% {
-      z-index: -1;
-    }
-  }
-
-  @keyframes slide {
-    0% {
-      background-position: 0 0;
-    }
-    50% {
-      background-position: -10vw 0;
-    }
-    100% {
-      background-position: 0 0;
-    }
   }
 
   aside:nth-of-type(1) {
-    background-image: url(/static/images/bernar-venet-metametria-1.jpg);
-    animation-delay: 3s;
+    background-image: url(/static/images/bazaart-1.png);
+    mix-blend-mode: luminosity;
   }
 
   aside:nth-of-type(2) {
-    background-image: url(/static/images/bernar-venet-metametria-2.jpg);
-    animation-delay: 5s;
+    background-image: url(/static/images/bazaart-2.png);
+    mix-blend-mode: difference;
   }
 
   aside:nth-of-type(3) {
-    background-image: url(/static/images/bernar-venet-metametria-3.jpg);
+    background-image: url(/static/images/bazaart-3.png);
+    mix-blend-mode: luminosity;
   }
 
   div {
