@@ -8,11 +8,9 @@ Vue.config.productionTip = false
 
 // Lazyload for images and components
 // - https://github.com/hilongjw/vue-lazyload
-// - it breaks the endless scrolling so removing now
-/*
+// - it breaks the endless scrolling so using only for background images
 import VueLazyload from 'vue-lazyload'
 Vue.use(VueLazyload)
-*/
 
 // Waypoint scrolling - checking elements entering / leaving the viewport
 // - https://github.com/scaccogatto/vue-waypoint

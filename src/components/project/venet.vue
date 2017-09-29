@@ -1,24 +1,15 @@
  <template lang="html">
-  <section>
+  <section ref="section" @mousemove="onMouseMove($event)">
     <h3 hidden>Bernar Venet MetaMetria</h3>
 
-    <v-waypoint @waypoint-in="waypointInHandler" @waypoint-out="waypointOutHandler"></v-waypoint>
-
-    <aside class="venet-image">
-      <h3 hidden>Bernar Venet MetaMetria Image 1</h3>
+    <aside v-for="image in images" refs="image">
+      <h3 hidden>Background image</h3>
+      <div v-lazy:background-image="image"></div>
     </aside>
 
-    <aside class="venet-image">
-      <h3 hidden>Bernar Venet MetaMetria Image 2</h3>
-    </aside>
-
-    <aside class="venet-image">
-      <h3 hidden>Bernar Venet MetaMetria Image 3</h3>
-    </aside>
-
-    <div id='warped'>
+    <p id='warped'>
       <span class='w0'>B</span><span class='w1'>e</span><span class='w2'>r</span><span class='w3'>n</span><span class='w4'>a</span><span class='w5'>r</span><span class='w6'> </span><span class='w7'>V</span><span class='w8'>e</span><span class='w9'>n</span><span class='w10'>e</span><span class='w11'>t</span><span class='w12'>:</span><span class='w13'> </span><span class='w14'>M</span><span class='w15'>e</span><span class='w16'>t</span><span class='w17'>a</span><span class='w18'>M</span><span class='w19'>e</span><span class='w20'>t</span><span class='w21'>r</span><span class='w22'>i</span><span class='w23'>a</span>
-    </div>
+    </p>
   </section>
 </template>
 
@@ -27,19 +18,37 @@
 
   export default {
     name: 'mv-venet',
-    methods: {
-      handleScroll: _.throttle(() => {
-        const images = document.querySelectorAll('.venet-image')
-        for (var i = 0; i < images.length; i++) {
-          images[i].style.backgroundPosition = '130% 50%'
-        }
-      }, 200),
-      waypointInHandler () {
-        window.addEventListener('scroll', this.handleScroll())
-      },
-      waypointOutHandler () {
-        window.removeEventListener('scroll', this.handleScroll())
+    data: function () {
+      return {
+        images: [
+          '/static/images/bazaart-1.png',
+          '/static/images/bazaart-2.png',
+          '/static/images/bazaart-3.png'
+        ],
+        mousePosition: 0,
+        sectionHeight: 0
       }
+    },
+    methods: {
+      onMouseMove: _.throttle(
+        function (event) {
+          if (this.mousePosition !== 0) {
+            if (this.mousePosition !== event.pageY) {
+              var difference = event.pageY - this.mousePosition
+              var percentage = difference * 100 / this.sectionHeight
+              var asides = this.$refs.image
+              console.log(asides)
+              console.log(difference)
+              console.log(percentage)
+            }
+          }
+          this.mousePosition = event.pageY
+        },
+        500
+      )
+    },
+    mounted () {
+      this.sectionHeight = this.$refs.section.clientHeight
     }
   }
 </script>
@@ -56,35 +65,37 @@
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
+  }
+
+  aside div {
+    width: 100%;
+    height: 100%;
     background-position: 50% 50%;
   }
 
   aside:nth-of-type(1) {
-    background-image: url(/static/images/bazaart-1.png);
     mix-blend-mode: luminosity;
     background-color: darkgreen;
   }
 
   aside:nth-of-type(2) {
-    background-image: url(/static/images/bazaart-2.png);
     mix-blend-mode: difference;
     background-color: blue;
   }
 
   aside:nth-of-type(3) {
-    background-image: url(/static/images/bazaart-3.png);
     mix-blend-mode: luminosity;
     background-color: darkgray;
   }
 
-  div {
+  p {
     text-transform: uppercase;
     mix-blend-mode: luminosity;
     transform: scale(1.2) translate(10em, 5em);
   }
 
-  div span {
+  p span {
     font-size: 300%;
     background: black;
     color: white;

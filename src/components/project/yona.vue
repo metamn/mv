@@ -79,7 +79,7 @@
     font-size: 1500%;
     font-weight: 900;
     color: white;
-    line-height: .5;
+    line-height: .7;
 
     cursor: pointer;
 
