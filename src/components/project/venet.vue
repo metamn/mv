@@ -39,21 +39,25 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
+    background-position: center;
   }
 
   aside:nth-of-type(1) {
     background-image: url(/static/images/bazaart-1.png);
     mix-blend-mode: luminosity;
+    background-color: darkgreen;
   }
 
   aside:nth-of-type(2) {
     background-image: url(/static/images/bazaart-2.png);
     mix-blend-mode: difference;
+    background-color: blue;
   }
 
   aside:nth-of-type(3) {
     background-image: url(/static/images/bazaart-3.png);
     mix-blend-mode: luminosity;
+    background-color: darkgray;
   }
 
   div {
@@ -64,6 +68,8 @@
 
   div span {
     font-size: 300%;
+    background: black;
+    color: white;
   }
 </style>
 
