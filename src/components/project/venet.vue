@@ -2,9 +2,8 @@
   <section ref="section" @mousemove="onMouseMove($event)">
     <h3 hidden>Bernar Venet MetaMetria</h3>
 
-    <aside v-for="image in images" refs="image">
+    <aside v-for="image in images" ref="image" v-lazy:background-image="image">
       <h3 hidden>Background image</h3>
-      <div v-lazy:background-image="image"></div>
     </aside>
 
     <p id='warped'>
@@ -25,19 +24,28 @@
           '/static/images/bazaart-2.png',
           '/static/images/bazaart-3.png'
         ],
+        asides: [],
         mousePosition: 0,
         sectionHeight: 0
       }
     },
     methods: {
+      getBackgroundPosition (element) {
+        var _tmp = window.getComputedStyle(element, null).backgroundPosition.trim().split(/\s+/)
+        return _tmp[0].slice(0, -1)
+      },
       onMouseMove: _.throttle(
         function (event) {
           if (this.mousePosition !== 0) {
             if (this.mousePosition !== event.pageY) {
               var difference = event.pageY - this.mousePosition
               var percentage = difference * 100 / this.sectionHeight
-              var asides = this.$refs.image
-              console.log(asides)
+              for (var i = 0; i < this.asides.length; i++) {
+                var currentPosition = this.getBackgroundPosition(this.asides[i])
+                var newPosition = currentPosition - percentage
+                console.log(currentPosition)
+                this.asides[i].style.backgroundPosition = newPosition + '% 50%'
+              }
               console.log(difference)
               console.log(percentage)
             }
@@ -49,6 +57,7 @@
     },
     mounted () {
       this.sectionHeight = this.$refs.section.clientHeight
+      this.asides = this.$refs.image
     }
   }
 </script>
@@ -66,11 +75,6 @@
     left: 0;
     width: 100%;
     height: 100vh;
-  }
-
-  aside div {
-    width: 100%;
-    height: 100%;
     background-position: 50% 50%;
   }
 
