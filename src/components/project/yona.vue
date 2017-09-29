@@ -67,7 +67,6 @@
     overflow: hidden;
     position: relative;
     background: crimson;
-    padding: 5em 5em 0;
   }
 
   h3 {
