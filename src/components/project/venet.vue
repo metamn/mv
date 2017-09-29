@@ -22,7 +22,7 @@
     justify-content: center;
     align-items: center;
 
-    background-image: url(/static/images/bernar-venet-metametria-1.jpg);
+    background-image: url(/static/images/bernar-venet-metametria-3.jpg);
     mix-blend-mode: hard-light;
   }
 
@@ -36,19 +36,6 @@
   div span {
     font-size: 300%;
     background: brown;
-    // animation: flow 30s infinite;
-  }
-
-  @keyframes flow {
-    0% {
-      line-height: 0.65;
-    }
-    50% {
-      line-height: 23;
-    }
-    100% {
-      line-height: 0.65;
-    }
   }
 </style>
 
