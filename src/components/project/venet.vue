@@ -2,6 +2,18 @@
   <section>
     <h3 hidden>Bernar Venet MetaMetria</h3>
 
+    <aside>
+      <h3 hidden>Bernar Venet MetaMetria Image 1</h3>
+    </aside>
+
+    <aside>
+      <h3 hidden>Bernar Venet MetaMetria Image 2</h3>
+    </aside>
+
+    <aside>
+      <h3 hidden>Bernar Venet MetaMetria Image 3</h3>
+    </aside>
+
     <div id='warped'>
       <span class='w0'>B</span><span class='w1'>e</span><span class='w2'>r</span><span class='w3'>n</span><span class='w4'>a</span><span class='w5'>r</span><span class='w6'> </span><span class='w7'>V</span><span class='w8'>e</span><span class='w9'>n</span><span class='w10'>e</span><span class='w11'>t</span><span class='w12'>:</span><span class='w13'> </span><span class='w14'>M</span><span class='w15'>e</span><span class='w16'>t</span><span class='w17'>a</span><span class='w18'>M</span><span class='w19'>e</span><span class='w20'>t</span><span class='w21'>r</span><span class='w22'>i</span><span class='w23'>a</span>
     </div>
@@ -18,48 +30,70 @@
   section {
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+  }
 
-    background-image: url(/static/images/bernar-venet-metametria-3.jpg);
+  aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
     mix-blend-mode: hard-light;
+    animation: zindex 20s infinite;
+  }
+
+  @keyframes zindex {
+    0% {
+      z-index: -1;
+    }
+    50% {
+      z-index: 0;
+    }
+    100% {
+      z-index: -1;
+    }
+  }
+
+  @keyframes slide {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: -10vw 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+
+  aside:nth-of-type(1) {
+    background-image: url(/static/images/bernar-venet-metametria-1.jpg);
+    animation-delay: 3s;
+  }
+
+  aside:nth-of-type(2) {
+    background-image: url(/static/images/bernar-venet-metametria-2.jpg);
+    animation-delay: 5s;
+  }
+
+  aside:nth-of-type(3) {
+    background-image: url(/static/images/bernar-venet-metametria-3.jpg);
   }
 
   div {
     text-transform: uppercase;
-    mix-blend-mode: color-burn;
-    position: relative;
-    transform: scale(1.2) translate(-30vw, -30vh);
+    mix-blend-mode: luminosity;
+    transform: scale(1.2) translate(10em, 5em);
   }
 
   div span {
     font-size: 300%;
-    background: brown;
   }
 </style>
 
 <style type='text/css'>
-<!DOCTYPE html>
-<html>
 
-   <head>
-          <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-          <title>
-                 Warped Text
-          </title>
-          <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=ABeeZee:regular:latin'>
-          <style type='text/css'>
-          <!DOCTYPE html>
-<html>
-
-<head>
-       <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
-       <title>
-              Warped Text
-       </title>
-       <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=ABeeZee:regular:latin'>
-       <style type='text/css'>
               #warped {position: relative; display: block; width:744.0000081658363px;
               height:601px;}
 
