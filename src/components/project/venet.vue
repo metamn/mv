@@ -1,16 +1,18 @@
-<template lang="html">
+ <template lang="html">
   <section>
     <h3 hidden>Bernar Venet MetaMetria</h3>
 
-    <aside>
+    <v-waypoint @waypoint-in="waypointInHandler" @waypoint-out="waypointOutHandler"></v-waypoint>
+
+    <aside class="venet-image">
       <h3 hidden>Bernar Venet MetaMetria Image 1</h3>
     </aside>
 
-    <aside>
+    <aside class="venet-image">
       <h3 hidden>Bernar Venet MetaMetria Image 2</h3>
     </aside>
 
-    <aside>
+    <aside class="venet-image">
       <h3 hidden>Bernar Venet MetaMetria Image 3</h3>
     </aside>
 
@@ -21,8 +23,33 @@
 </template>
 
 <script>
+  import _ from 'lodash'
+
   export default {
-    name: 'mv-venet'
+    name: 'mv-venet',
+    data: function () {
+      return {
+        images: []
+      }
+    },
+    methods: {
+      handleScroll: _.throttle(() => {
+        console.log('a')
+        const images = document.querySelectorAll('.venet-image')
+        for (var i = 0; i < images.length; i++) {
+          images[i].style.backgroundPosition = '130% 50%'
+        }
+      }, 200),
+      waypointInHandler () {
+        window.addEventListener('scroll', this.handleScroll())
+      },
+      waypointOutHandler () {
+        window.removeEventListener('scroll', this.handleScroll())
+      }
+    },
+    mounted () {
+      //
+    }
   }
 </script>
 
@@ -39,7 +66,7 @@
     left: 0;
     width: 100%;
     min-height: 100vh;
-    background-position: center;
+    background-position: 50% 50%;
   }
 
   aside:nth-of-type(1) {
