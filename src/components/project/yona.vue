@@ -67,6 +67,7 @@
     overflow: hidden;
     position: relative;
     background: crimson;
+    min-height: 100vh;
   }
 
   h3 {

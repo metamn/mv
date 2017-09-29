@@ -27,14 +27,8 @@
 
   export default {
     name: 'mv-venet',
-    data: function () {
-      return {
-        images: []
-      }
-    },
     methods: {
       handleScroll: _.throttle(() => {
-        console.log('a')
         const images = document.querySelectorAll('.venet-image')
         for (var i = 0; i < images.length; i++) {
           images[i].style.backgroundPosition = '130% 50%'
@@ -46,9 +40,6 @@
       waypointOutHandler () {
         window.removeEventListener('scroll', this.handleScroll())
       }
-    },
-    mounted () {
-      //
     }
   }
 </script>
