@@ -25,38 +25,41 @@
           '/static/images/bazaart-3.png'
         ],
         asides: [],
-        mousePosition: 0,
-        sectionHeight: 0
+        mousePositionX: 0,
+        mousePositionY: 0,
+        sectionHeight: 0,
+        sectionWidth: 0
       }
     },
     methods: {
-      getBackgroundPosition (element) {
-        var _tmp = window.getComputedStyle(element, null).backgroundPosition.trim().split(/\s+/)
-        return _tmp[0].slice(0, -1)
+      setBackgroundPosition (percentageX, percentageY) {
+        for (var i = 0; i < this.asides.length; i++) {
+          var direction = (i % 2 === 0) ? 1 : -1
+          var newPositionX = 50 + direction * percentageX * i * Math.floor((Math.random() * 0.1) + 1)
+          var newPositionY = 50 + direction * percentageY * i * Math.floor((Math.random() * 0.1) + 1)
+          this.asides[i].style.backgroundPosition = newPositionX + '% ' + newPositionY + '%'
+        }
       },
       onMouseMove: _.throttle(
         function (event) {
-          if (this.mousePosition !== 0) {
-            if (this.mousePosition !== event.pageY) {
-              var difference = event.pageY - this.mousePosition
-              var percentage = difference * 100 / this.sectionHeight
-              for (var i = 0; i < this.asides.length; i++) {
-                var currentPosition = this.getBackgroundPosition(this.asides[i])
-                var newPosition = currentPosition - percentage
-                console.log(currentPosition)
-                this.asides[i].style.backgroundPosition = newPosition + '% 50%'
-              }
-              console.log(difference)
-              console.log(percentage)
+          if ((this.mousePositionX !== 0) || (this.mousePositionY !== 0)) {
+            if ((this.mousePositionY !== event.pageY) || this.mousePositionX !== event.pageX) {
+              var differenceY = event.pageY - this.mousePositionY
+              var differenceX = event.pageX - this.mousePositionX
+              var percentageY = differenceY * 100 / this.sectionHeight / 3
+              var percentageX = differenceX * 100 / this.sectionWidth
+              this.setBackgroundPosition(percentageX, percentageY)
             }
           }
-          this.mousePosition = event.pageY
+          this.mousePositionY = event.pageY
+          this.mousePositionX = event.pageX
         },
         500
       )
     },
     mounted () {
       this.sectionHeight = this.$refs.section.clientHeight
+      this.sectionWidth = this.$refs.section.clientWidth
       this.asides = this.$refs.image
     }
   }
@@ -76,6 +79,8 @@
     width: 100%;
     height: 100vh;
     background-position: 50% 50%;
+    will-change: background-position;
+    transition: background-position 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   }
 
   aside:nth-of-type(1) {
