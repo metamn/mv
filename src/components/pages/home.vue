@@ -18,7 +18,7 @@
   import venet from './../project/venet'
 
   export default {
-    name: 'home',
+    name: 'mv-home-page',
     components: {
       'mv-strapline': strapline,
       'mv-thumbnails': thumbnails,

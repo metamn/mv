@@ -1,17 +1,17 @@
 <template lang="html">
   <section>
-    <h3 hidden>About</h3>
-    <mv-about></mv-about>
+    <h3 hidden>Do Not Trust The Mirror</h3>
+    <mv-mirror></mv-mirror>
   </section>
 </template>
 
 <script>
-  import about from './../project/about'
+  import mirror from './../project/mirror'
 
   export default {
-    name: 'mv-about-page',
+    name: 'mv-mirror-page',
     components: {
-      'mv-about': about
+      'mv-mirror': mirror
     }
   }
 </script>

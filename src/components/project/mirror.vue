@@ -1,7 +1,9 @@
 <template lang="html">
   <section>
     <h3>
-      Do Not Trust The Mirror
+      <router-link :class="$style.link" v-on:click.native="doSomethingCool" to="/do-not-trust-the-mirror">
+        Do Not Trust The Mirror
+      </router-link>
     </h3>
 
     <ul>
@@ -82,6 +84,14 @@
     background: black;
     color: white;
     position: relative;
+  }
+
+  .link {
+    text-decoration: none;
+    color: white;
+    
+    position: relative;
+    z-index: 1;
   }
 
   h3 {
