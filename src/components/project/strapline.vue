@@ -37,19 +37,20 @@
       //
       //
       $character-count: 28;
-      $matrix-size: 6;
+      $matrix-size: 5;
       // the container is a matrix, ie has 1:1 intrinsic ratio set
       // 6x6=36, so 28 chars fit in; 5x5=25 would be not enough
       // however we should go with 5 ... it's like been counting from 0..5 instead of 1..6
 
-      $font-size: 1.333em;
-      $padding: 1.25em;
-      $cell-size: calc(#{$font-size} + 2 * #{$padding}) ;
-      $width: calc(#{$cell-size} * (#{$matrix-size} - 1));
+      $font-size: 5vmin;
+      $padding: 5vmin;
+      $cell-size: calc(#{$font-size} + #{$padding * 2}) ;
+      $width: calc(#{$cell-size} * (#{$matrix-size}));
 
       width: $width;
 
       .char {
+        font-size: $font-size;
         margin: $padding;
         background-color: black;
       }
@@ -60,7 +61,7 @@
         width: 100vw;
 
         .char {
-          margin: 5.5vmin;
+          margin: 7vmin;
         }
       }
 
@@ -68,7 +69,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: baseline;
 
         will-change: auto;
         transition: transform 1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
@@ -76,7 +76,6 @@
         &:hover {
           .char {
             background-color: transparent;
-            transform: scale(2);
           }
         }
       }
@@ -86,6 +85,6 @@
 
 <style module>
   .strapline {
-    composes: strapline from './../framework/text-style.css';
+    // composes: strapline from './../framework/text-style.css';
   }
 </style>

@@ -50,8 +50,6 @@
   }
 
   aside ul {
-    position: relative;
-    top: calc(lem * 2);
     background: magenta;
     animation: thumbs 2s ease-in-out infinite;
     list-style-type: decimal-leading-zero;
