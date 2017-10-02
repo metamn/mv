@@ -1,7 +1,8 @@
 <template lang="html">
   <section>
-    <h3>Yona Friedman: The Dilution of Architecture</h3>
-
+    <router-link :class="$style.link" v-on:click.native="doSomethingCool" to="/yona-frideman-the-dilution-of-architecture">
+      <h3>Yona Friedman: The Dilution of Architecture</h3>
+    </router-link>
     <ul>
       <li v-for="image in images">
         <mv-image :image='image'></mv-image>

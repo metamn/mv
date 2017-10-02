@@ -1,6 +1,6 @@
 <template lang="html">
   <h3 :class="[$style.logo, 'logo']">
-    <mv-link url="http://metamn.io" title="metamn" klass="not-styled">
+    <mv-link url="/" title="metamn" klass="not-styled">
       <mv-text-flip text="violuk"></mv-text-flip>
     </mv-link>
   </h3>
