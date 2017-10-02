@@ -90,7 +90,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    width: 2000vmax;
+    width: 1500vmax;
   }
 
   ul li {
@@ -100,7 +100,7 @@
     position: relative;
     z-index: 0;
 
-    width: 200vmax;
+    width: 150vmax;
   }
 
 
@@ -109,7 +109,7 @@
       left: 0px;
     }
     50% {
-      left: -1000vmax;
+      left: -750vmax;
     }
     100% {
       left: 0px;
