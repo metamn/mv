@@ -69,7 +69,7 @@
     height: 100%;
     overflow: hidden;
     position: relative;
-    background: crimson;
+    background: dimgray;
   }
 
   h3 {
@@ -77,6 +77,7 @@
     font-weight: bold;
     color: white;
     line-height: .7;
+    word-break: break-all;
   }
 
   ul {

@@ -81,33 +81,33 @@
     width: 100%;
     height: 100vh;
     background-position: 50% 50%;
+    background-repeat: no-repeat;
     will-change: background-position;
     transition: background-position 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
   }
 
   aside:nth-of-type(1) {
     mix-blend-mode: luminosity;
-    background-color: darkgreen;
+    // background-color: darkgreen;
   }
 
   aside:nth-of-type(2) {
     mix-blend-mode: difference;
-    background-color: blue;
+    // background-color: blue;
   }
 
   aside:nth-of-type(3) {
     mix-blend-mode: luminosity;
-    background-color: darkgray;
+    // background-color: darkgray;
   }
 
   p {
     text-transform: uppercase;
     mix-blend-mode: luminosity;
-    transform: scale(1.2) translate(10em, 5em);
   }
 
   p span {
-    font-size: 300%;
+    font-size: 7vmin;
     background: black;
     color: white;
   }
