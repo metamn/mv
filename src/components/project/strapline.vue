@@ -85,6 +85,6 @@
 
 <style module>
   .strapline {
-    // composes: strapline from './../framework/text-style.css';
+    padding: 1.25em;
   }
 </style>

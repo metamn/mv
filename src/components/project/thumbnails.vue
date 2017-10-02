@@ -46,7 +46,8 @@
   @value lem from './../framework/scale.css';
 
   aside {
-    width: calc(lem * 10);
+    width: calc(15vmin * 2.5); /* half the strapline */
+    padding: lem;
   }
 
   aside ul {

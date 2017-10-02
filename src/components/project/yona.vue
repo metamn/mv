@@ -65,56 +65,50 @@
 
 <style module scoped>
   section {
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     position: relative;
     background: crimson;
-    min-height: 100vh;
   }
 
   h3 {
-    position: absolute;
-    top: 0%;
-    left: 0;
-    z-index: 1;
-
-    font-size: 1500%;
-    font-weight: 900;
+    font-size: 40vmin;
+    font-weight: bold;
     color: white;
     line-height: .7;
-
-    cursor: pointer;
-
-    mix-blend-mode: difference;
   }
 
   ul {
     list-style: none;
 
+    position: absolute;
+    top: 0;
+    left: 0;
+
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
-    width: 4000px;
-
-    position: relative;
+    width: 2000vmax;
   }
 
   ul li {
-    mix-blend-mode: luminosity;
+    mix-blend-mode: difference;
 
-    animation: infinite-shift-left 12.5s linear infinite;
+    animation: infinite-shift-left 80s linear infinite;
     position: relative;
     z-index: 0;
 
-    min-width: 500px;
-    max-width: 500px;
+    width: 200vmax;
   }
+
 
   @keyframes infinite-shift-left {
     0% {
       left: 0px;
     }
     50% {
-      left: -2000px;
+      left: -1000vmax;
     }
     100% {
       left: 0px;
