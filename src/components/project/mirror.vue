@@ -79,6 +79,9 @@
 
 <style module scoped>
   section {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-wrap: wrap;
     background: black;
@@ -89,7 +92,7 @@
   .link {
     text-decoration: none;
     color: white;
-    
+
     position: relative;
     z-index: 1;
   }
@@ -97,7 +100,7 @@
   h3 {
     position: absolute;
     top: 50%;
-    font-size: 300%;
+    font-size: 7vmin;
   }
 
   ul {
@@ -116,6 +119,10 @@
 
   ul li:hover {
     animation: flip 2s ease-in-out;
+  }
+
+  img {
+    width: 40vmin;
   }
 
   .second {
