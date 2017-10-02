@@ -9,6 +9,10 @@
   color: link;
 }
 
+.link-not-styled {
+  text-decoration: none;
+}
+
 .logo {
   composes: logo from './fonts.css';
   display: inline-flex;

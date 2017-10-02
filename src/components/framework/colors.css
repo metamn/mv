@@ -1,7 +1,7 @@
 @value white: white;
 @value black: black;
 @value blue: blue;
-@value link: blue;
+@value link: black;
 
 .default {
   color: black;
