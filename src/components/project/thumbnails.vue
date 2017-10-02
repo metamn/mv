@@ -46,7 +46,7 @@
   @value lem from './../framework/scale.css';
 
   aside {
-    width: calc(15vmin * 2.5); /* half the strapline */
+    width: calc(5vmin * 3 * 2.5); /* half the strapline */
     padding: lem;
   }
 

@@ -115,6 +115,7 @@
     background: black;
     mix-blend-mode: hard-light;
     cursor: pointer;
+    animation: flip 10s ease-in-out infinite;
   }
 
   ul li:hover {
@@ -130,6 +131,8 @@
     top: 0;
     left: 0;
     transform: scaleY(-1);
+    animation: flip 5s ease-in-out infinite;
+    animation-delay: 1s;
     background: transparent; /* tHIS MAKES THAT FUCKING TRICK !!!! */
   }
 
@@ -139,8 +142,8 @@
   }
 
   .second li:hover {
-    opacity: 1;
-    animation: flip 2s ease-in-out;
+     opacity: 1;
+     animation: flip 2s ease-in-out infinite;
   }
 
 

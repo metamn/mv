@@ -25,6 +25,6 @@
   .logo {
     composes: logo from './../framework/text-style.css';
     padding: lem;
-    visibility: hidden;
+    display: none;
   }
 </style>

@@ -1,11 +1,11 @@
 <template>
-  <section :class="[$style.defaultStyle]">
-    <mv-strapline></mv-strapline>
-    <mv-thumbnails></mv-thumbnails>
+  <section id="home" :class="[$style.defaultStyle]">
     <mv-about></mv-about>
     <mv-yona></mv-yona>
     <mv-mirror></mv-mirror>
     <mv-venet></mv-venet>
+    <mv-strapline></mv-strapline>
+    <mv-thumbnails></mv-thumbnails>
   </section>
 </template>
 
