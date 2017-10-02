@@ -4,6 +4,7 @@ import homeLayout from '@/components/pages/home-layout'
 import about from '@/components/pages/about'
 import yona from '@/components/pages/yona'
 import mirror from '@/components/pages/mirror'
+import venet from '@/components/pages/venet'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/do-not-trust-the-mirror',
       name: 'Do Not Trust The Mirror',
       component: mirror
+    },
+    {
+      path: '/bernar-venet-metametria',
+      name: 'Bernar Venet: MetaMetria',
+      component: venet
     }
   ]
 })

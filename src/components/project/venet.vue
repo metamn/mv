@@ -6,9 +6,11 @@
       <h3 hidden>Background image</h3>
     </aside>
 
-    <p id='warped'>
-      <span class='w0'>B</span><span class='w1'>e</span><span class='w2'>r</span><span class='w3'>n</span><span class='w4'>a</span><span class='w5'>r</span><span class='w6'> </span><span class='w7'>V</span><span class='w8'>e</span><span class='w9'>n</span><span class='w10'>e</span><span class='w11'>t</span><span class='w12'>:</span><span class='w13'> </span><span class='w14'>M</span><span class='w15'>e</span><span class='w16'>t</span><span class='w17'>a</span><span class='w18'>M</span><span class='w19'>e</span><span class='w20'>t</span><span class='w21'>r</span><span class='w22'>i</span><span class='w23'>a</span>
-    </p>
+    <router-link :class="$style.link" v-on:click.native="doSomethingCool" to="/bernar-venet-metametria">
+      <p id='warped'>
+        <span class='w0'>B</span><span class='w1'>e</span><span class='w2'>r</span><span class='w3'>n</span><span class='w4'>a</span><span class='w5'>r</span><span class='w6'> </span><span class='w7'>V</span><span class='w8'>e</span><span class='w9'>n</span><span class='w10'>e</span><span class='w11'>t</span><span class='w12'>:</span><span class='w13'> </span><span class='w14'>M</span><span class='w15'>e</span><span class='w16'>t</span><span class='w17'>a</span><span class='w18'>M</span><span class='w19'>e</span><span class='w20'>t</span><span class='w21'>r</span><span class='w22'>i</span><span class='w23'>a</span>
+      </p>
+    </router-link>
   </section>
 </template>
 
